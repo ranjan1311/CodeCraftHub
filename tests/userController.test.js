@@ -1,6 +1,6 @@
 // tests/userController.test.js
 const request = require('supertest');
-const app = require('../src/index');
+const app = require('../src/app');
 
 describe('User Controller', () => {
     it('should register a user', async () => {

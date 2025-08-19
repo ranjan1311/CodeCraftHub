@@ -1,13 +1,13 @@
 // src/config/server.js
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
-// Server configuration
-const createServer = () => {
+const initServer = () => {
     const app = express();
-    app.use(cors()); // Enable CORS
-    app.use(express.json()); // Parse JSON requests
+    app.use(cors());
+    app.use(bodyParser.json());
     return app;
 };
 
-module.exports = createServer;
+module.exports = initServer;
